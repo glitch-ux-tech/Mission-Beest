@@ -1,6 +1,4 @@
-// Mission Beest — main1.html page logic
-// Handles the authorize sequence, terminal boot text, mission briefing popup,
-// navbar routing, and the Nova suit selector.
+
 
 const button = document.querySelector(".mission-button");
 const info = document.querySelector(".mission-info");
@@ -19,9 +17,7 @@ const navAchievements = document.getElementById("navlist3");
 const closeMissionBriefing = document.getElementById("closeMissionBriefing");
 const closeBriefingButton = document.getElementById("closeBriefingButton");
 
-// ----- Navbar routing -----
-// The navbar's Galaxy Map link goes straight to galaxymap.html.
-// This is separate from the OPEN GALAXY MAP button in the terminal below.
+
 
 if (navGalaxy) {
   navGalaxy.addEventListener("click", () => {
@@ -35,7 +31,6 @@ if (navAchievements) {
   });
 }
 
-// ----- Warning text glitch -----
 
 setInterval(() => {
   if (!warning) return;
@@ -46,7 +41,6 @@ setInterval(() => {
   setTimeout(() => { warning.style.transform = "translate(0,0)"; }, 120);
 }, 2500);
 
-// ----- Terminal boot messages -----
 
 const messages = [
   "Initializing Mission...",
@@ -60,9 +54,6 @@ const messages = [
   "Preparing Launch..."
 ];
 
-// ----- Initial state -----
-// The OPEN GALAXY MAP button stays fully hidden (display, opacity, visibility,
-// pointer-events) until the terminal sequence finishes.
 
 if (info) {
   info.style.display = "none";
@@ -85,7 +76,6 @@ if (galaxyMap) {
   galaxyMap.style.display = "none";
 }
 
-// ----- Authorize mission -----
 
 let missionStarted = false;
 
@@ -118,7 +108,6 @@ if (button) {
   });
 }
 
-// ----- Terminal typing sequence -----
 
 function runTerminal() {
   if (!terminal || !bar) {
@@ -177,7 +166,6 @@ function runTerminal() {
   nextMessage();
 }
 
-// ----- Open Galaxy Map button (terminal only, not the navbar) -----
 
 if (galaxyButton) {
   galaxyButton.addEventListener("click", () => {
@@ -185,7 +173,6 @@ if (galaxyButton) {
   });
 }
 
-// ----- Mission briefing popup -----
 
 if (navMission && missionBriefing) {
   navMission.addEventListener("click", () => {
@@ -219,7 +206,6 @@ document.addEventListener("keydown", (event) => {
   }
 });
 
-// ----- Nova equipment bay -----
 
 const novaSuits = [
   { id: 1, name: "EXPLORER", description: "STANDARD MISSION SUIT", image: "assets/nova-default.png", required: 0 },
@@ -310,7 +296,6 @@ if (selectSuit) {
   });
 }
 
-// ----- Load the previously equipped suit on page load -----
 
 const savedSuitIndex = novaSuits.findIndex(suit => suit.id === getEquippedSuit());
 
