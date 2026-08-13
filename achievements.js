@@ -43,7 +43,7 @@ function updateAchievements() {
 
 if (backButton) {
   backButton.addEventListener("click", () => {
-    window.location.href = "./main1.html?skipIntro=true";
+    window.location.href = "./index.html?skipIntro=true";
   });
 }
 
