@@ -12,7 +12,7 @@ if (backToMain) {
            
 
             window.location.href =
-                "main1.html?skipIntro=true";
+                "index.html?skipIntro=true";
 
         }
     );
