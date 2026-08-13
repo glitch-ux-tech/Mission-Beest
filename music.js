@@ -1,44 +1,16 @@
-// =========================================================
-// MISSION BEEST
-// CONTINUOUS MAIN MUSIC SYSTEM
-// =========================================================
-//
-// Controls ONLY:
-//
-// main1.html
-// briefing.html
-// galaxymap.html
-// achievements.html
-//
-// Music:
-// new-worlds.mp3
-//
-// Intro music is NOT controlled here.
-//
-// The current music position is saved in sessionStorage
-// and restored when moving between the main game pages.
-// =========================================================
 
-
-// =========================================================
-// SETTINGS
-// =========================================================
 
 const MUSIC_KEY = "beestMusicTime";
 const MUSIC_VOLUME = 0.28;
 
 
-// =========================================================
-// MUSIC ELEMENT
-// =========================================================
+
 
 const music =
     document.getElementById("pageMusic");
 
 
-// =========================================================
-// SAFETY CHECK
-// =========================================================
+
 
 if (!music) {
 
@@ -53,9 +25,7 @@ if (!music) {
     );
 
 
-    // =====================================================
-    // BASIC SETTINGS
-    // =====================================================
+
 
     music.volume =
         MUSIC_VOLUME;
@@ -63,10 +33,6 @@ if (!music) {
     music.loop =
         true;
 
-
-    // =====================================================
-    // RESTORE MUSIC POSITION
-    // =====================================================
 
     function restoreMusicPosition() {
 
@@ -103,10 +69,7 @@ if (!music) {
         }
 
 
-        // ---------------------------------------------
-        // IMPORTANT
-        // Wait until audio metadata is loaded.
-        // ---------------------------------------------
+
 
         if (
             !Number.isFinite(
@@ -120,9 +83,7 @@ if (!music) {
         }
 
 
-        // Don't seek beyond the song.
-        // A tiny margin prevents an invalid position.
-
+     
         const safeTime =
             Math.min(
                 time,
@@ -145,9 +106,6 @@ if (!music) {
     }
 
 
-    // =====================================================
-    // WAIT FOR AUDIO TO LOAD
-    // =====================================================
 
     if (
         music.readyState >= 1
@@ -167,10 +125,6 @@ if (!music) {
 
     }
 
-
-    // =====================================================
-    // SAVE MUSIC POSITION
-    // =====================================================
 
     function saveMusicPosition() {
 
@@ -192,9 +146,6 @@ if (!music) {
     }
 
 
-    // =====================================================
-    // START MUSIC
-    // =====================================================
 
     function playMusic() {
 
@@ -225,10 +176,6 @@ if (!music) {
     }
 
 
-    // =====================================================
-    // REMOVE FALLBACK LISTENERS
-    // =====================================================
-
     function removeStartListeners() {
 
         document.removeEventListener(
@@ -249,16 +196,12 @@ if (!music) {
     }
 
 
-    // =====================================================
-    // TRY AUTOPLAY
-    // =====================================================
+
 
     playMusic();
 
 
-    // =====================================================
-    // BROWSER AUTOPLAY FALLBACK
-    // =====================================================
+    
 
     document.addEventListener(
         "click",
@@ -276,9 +219,6 @@ if (!music) {
     );
 
 
-    // =====================================================
-    // SAVE EVERY 500ms
-    // =====================================================
 
     setInterval(
         saveMusicPosition,
@@ -286,9 +226,7 @@ if (!music) {
     );
 
 
-    // =====================================================
-    // SAVE BEFORE LEAVING
-    // =====================================================
+
 
     window.addEventListener(
         "beforeunload",
@@ -296,9 +234,6 @@ if (!music) {
     );
 
 
-    // =====================================================
-    // SAVE WHEN PAGE BECOMES HIDDEN
-    // =====================================================
 
     document.addEventListener(
         "visibilitychange",
