@@ -10,7 +10,7 @@ const canvas = document.getElementById("warpCanvas");
 const emberContainer = document.getElementById("ember");
 const quote = document.getElementById("quote");
 
-// Returning from the Galaxy Map skips the intro entirely.
+
 if (skipIntro) {
 
   if (intro) {
@@ -140,7 +140,6 @@ if (skipIntro) {
     }, 6500);
   }
 
-  // Wrap up the intro and reveal the site
   setTimeout(() => {
     if (intro) intro.style.opacity = "0";
 
