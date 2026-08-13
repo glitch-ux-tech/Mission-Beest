@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Mission BEEST | Mercury Surface</title>
+
+    <link rel="stylesheet" href="mercury.css" />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Share+Tech+Mono&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <main>
+      <!-- ========================= -->
+      <!-- MISSION CONTEXT -->
+      <!-- ========================= -->
+
+      <div id="missionIntro" class="mission-intro">
+        <div class="transmission-box">
+          <div class="transmission-label">[UNKNOWN SIGNAL]</div>
+
+          <p id="introMessage"></p>
+
+          <span class="skip-hint"> CLICK ANYWHERE TO CONTINUE </span>
+        </div>
+      </div>
+
+      <!-- ========================= -->
+      <!-- GAME AREA -->
+      <!-- ========================= -->
+
+      <section id="gameSection" class="game-section">
+        <!-- GAME HEADER -->
+
+        <div class="game-header">
+          <div class="game-title">
+            <span> MISSION BEEST // MERCURY </span>
+
+            <h1>SURFACE OPERATION</h1>
+          </div>
+
+          <!-- HUD -->
+
+          <div class="hud">
+            <div class="hud-item">
+              NOVA
+
+              <span id="health"> ♥♥♥ </span>
+            </div>
+
+            <div class="hud-item">
+              SIGNAL
+
+              <span id="signalStatus"> SEARCHING </span>
+            </div>
+          </div>
+        </div>
+
+        <!-- ========================= -->
+        <!-- GAME CANVAS -->
+        <!-- ========================= -->
+
+        <div class="game-wrapper">
+          <canvas id="mercuryGame"></canvas>
+        </div>
+
+        <!-- ========================= -->
+        <!-- CONTROLS -->
+        <!-- ========================= -->
+
+        <div class="controls">
+          <span> ◀ A / ← </span>
+
+          <span> JUMP: SPACE </span>
+
+          <span> D / → ▶ </span>
+        </div>
+
+        <!-- ========================= -->
+        <!-- GAME BUTTONS -->
+        <!-- ========================= -->
+
+        <div class="game-controls">
+          <button id="restartMission">↻ RESTART MISSION</button>
+
+          <button id="backGalaxy">← BACK TO GALAXY</button>
+        </div>
+
+        <!-- ========================= -->
+        <!-- MISSION COMPLETE -->
+        <!-- ========================= -->
+
+        <div id="missionComplete" class="mission-complete">
+          <div class="complete-box">
+            <p class="complete-label">TRANSMISSION RECOVERED</p>
+
+            <h2>MISSION COMPLETE</h2>
+
+            <p>Nova recovered the unknown signal.</p>
+
+            <p class="mystery-text">
+              But the transmission wasn't coming from Mercury...
+            </p>
+
+            <button id="returnGalaxy">RETURN TO GALAXY MAP →</button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ========================= -->
+    <!-- JAVASCRIPT -->
+    <!-- ========================= -->
+
+    <script src="mercury-mission.js"></script>
+  </body>
+</html>

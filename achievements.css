@@ -1,0 +1,1010 @@
+/* =========================================================
+   MISSION BEEST // ACHIEVEMENTS
+========================================================= */
+
+
+/* =========================================================
+   RESET
+========================================================= */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+html,
+body {
+    width: 100%;
+    min-height: 100%;
+}
+
+
+body {
+
+    background: #01030b;
+
+    color: white;
+
+    font-family:
+        "Share Tech Mono",
+        monospace;
+
+    overflow: hidden;
+}
+
+
+/* =========================================================
+   SCREEN
+========================================================= */
+
+.achievement-screen {
+
+    position: relative;
+
+    width: 100vw;
+    height: 100vh;
+
+    overflow: hidden;
+
+    background:
+
+        radial-gradient(
+            circle at 50% 45%,
+            rgba(25, 30, 75, 0.35),
+            transparent 50%
+        ),
+
+        radial-gradient(
+            circle at 85% 15%,
+            rgba(56, 189, 248, 0.08),
+            transparent 30%
+        ),
+
+        #01030b;
+}
+
+
+/* =========================================================
+   GRID
+========================================================= */
+
+.space-grid {
+
+    position: absolute;
+
+    inset: 0;
+
+    background-image:
+
+        linear-gradient(
+            rgba(56,189,248,0.035) 1px,
+            transparent 1px
+        ),
+
+        linear-gradient(
+            90deg,
+            rgba(56,189,248,0.035) 1px,
+            transparent 1px
+        );
+
+    background-size: 70px 70px;
+
+    mask-image:
+        radial-gradient(
+            circle,
+            black 20%,
+            transparent 85%
+        );
+
+    animation:
+        gridMove 15s linear infinite;
+
+    pointer-events: none;
+}
+
+
+@keyframes gridMove {
+
+    from {
+        transform: translate(0,0);
+    }
+
+    to {
+        transform: translate(70px,70px);
+    }
+
+}
+
+
+/* =========================================================
+   STARS
+========================================================= */
+
+.stars {
+
+    position: absolute;
+
+    inset: 0;
+
+    pointer-events: none;
+
+    background-image:
+
+        radial-gradient(
+            circle,
+            white 1px,
+            transparent 1px
+        );
+
+    background-size: 140px 140px;
+
+    opacity: .35;
+
+    animation:
+        starsMove 20s linear infinite;
+}
+
+
+.stars-2 {
+
+    background-size: 220px 220px;
+
+    opacity: .18;
+
+    animation-duration: 35s;
+
+    animation-direction: reverse;
+}
+
+
+@keyframes starsMove {
+
+    from {
+        transform: translateY(0);
+    }
+
+    to {
+        transform: translateY(220px);
+    }
+
+}
+
+
+/* =========================================================
+   BACK BUTTON
+========================================================= */
+
+.back-button {
+
+    position: fixed;
+
+    top: 25px;
+    left: 25px;
+
+    z-index: 1000;
+
+    padding: 12px 20px;
+
+    background:
+        rgba(2,6,23,.85);
+
+    border:
+        1px solid #38BDF8;
+
+    border-radius: 8px;
+
+    color: #7DD3FC;
+
+    font-family:
+        "Share Tech Mono",
+        monospace;
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+    letter-spacing: 1.5px;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 0 8px rgba(56,189,248,.35),
+        inset 0 0 10px rgba(56,189,248,.05);
+
+    backdrop-filter: blur(6px);
+
+    transition:
+        transform .25s ease,
+        color .25s ease,
+        border-color .25s ease,
+        box-shadow .25s ease,
+        background .25s ease;
+}
+
+
+.back-button:hover {
+
+    color: white;
+
+    background:
+        rgba(8,47,73,.9);
+
+    border-color:
+        #22D3EE;
+
+    transform:
+        translateX(5px);
+
+    box-shadow:
+        0 0 12px rgba(34,211,238,.7),
+        0 0 30px rgba(34,211,238,.25);
+}
+
+
+.back-button:active {
+
+    transform:
+        translateX(2px)
+        scale(.96);
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.achievement-header {
+
+    position: relative;
+
+    height: 100px;
+
+    display: grid;
+
+    grid-template-columns:
+        1fr auto 1fr;
+
+    align-items: center;
+
+    padding: 20px 35px;
+
+    border-bottom:
+        1px solid rgba(56,189,248,.2);
+
+    background:
+        linear-gradient(
+            180deg,
+            rgba(1,3,11,.95),
+            rgba(1,3,11,.55)
+        );
+
+    z-index: 20;
+}
+
+
+.header-status {
+
+    color: #22C55E;
+
+    font-size: 12px;
+
+    letter-spacing: 2px;
+}
+
+
+.status-dot {
+
+    display: inline-block;
+
+    width: 7px;
+    height: 7px;
+
+    margin-right: 7px;
+
+    border-radius: 50%;
+
+    background: #22C55E;
+
+    box-shadow:
+        0 0 8px #22C55E;
+
+    animation:
+        statusPulse 1.5s infinite;
+}
+
+
+@keyframes statusPulse {
+
+    50% {
+        opacity: .3;
+    }
+
+}
+
+
+.header-title {
+
+    text-align: center;
+}
+
+
+.header-title > span {
+
+    display: block;
+
+    color: #64748B;
+
+    font-size: 9px;
+
+    letter-spacing: 4px;
+
+    margin-bottom: 5px;
+}
+
+
+.header-title h1 {
+
+    font-family:
+        "Orbitron",
+        sans-serif;
+
+    font-size: 27px;
+
+    letter-spacing: 7px;
+
+    color: #E0F2FE;
+
+    text-shadow:
+        0 0 10px #38BDF8,
+        0 0 30px rgba(56,189,248,.5);
+}
+
+
+.header-title small {
+
+    display: block;
+
+    margin-top: 5px;
+
+    color: #38BDF8;
+
+    font-size: 9px;
+
+    letter-spacing: 3px;
+}
+
+
+.mission-status {
+
+    text-align: right;
+
+    color: #FACC15;
+
+    font-family:
+        "Orbitron",
+        sans-serif;
+
+    font-size: 10px;
+
+    letter-spacing: 2px;
+}
+
+
+.mission-status strong {
+
+    display: block;
+
+    margin-top: 5px;
+
+    color: #22C55E;
+
+    font-size: 9px;
+}
+
+
+/* =========================================================
+   MAIN
+========================================================= */
+
+.achievement-container {
+
+    position: relative;
+
+    height:
+        calc(100vh - 155px);
+
+    overflow-y: auto;
+
+    padding:
+        35px 7vw 90px;
+
+    z-index: 5;
+}
+
+
+/* =========================================================
+   INTRO
+========================================================= */
+
+.achievement-intro {
+
+    text-align: center;
+
+    margin-bottom: 25px;
+}
+
+
+.achievement-intro span {
+
+    color: #38BDF8;
+
+    font-size: 9px;
+
+    letter-spacing: 4px;
+}
+
+
+.achievement-intro h2 {
+
+    margin: 8px 0;
+
+    font-family:
+        "Orbitron",
+        sans-serif;
+
+    font-size: 30px;
+
+    letter-spacing: 5px;
+
+    text-shadow:
+        0 0 12px #38BDF8;
+}
+
+
+.achievement-intro p {
+
+    color: #64748B;
+
+    font-size: 11px;
+
+    letter-spacing: 1px;
+}
+
+
+/* =========================================================
+   PROGRESS
+========================================================= */
+
+.progress-panel {
+
+    width: min(700px, 90vw);
+
+    margin:
+        0 auto 30px;
+
+    padding: 16px 20px;
+
+    border:
+        1px solid rgba(56,189,248,.25);
+
+    background:
+        rgba(2,6,23,.65);
+
+    box-shadow:
+        inset 0 0 25px rgba(56,189,248,.03);
+}
+
+
+.progress-top {
+
+    display: flex;
+
+    justify-content:
+        space-between;
+
+    color: #64748B;
+
+    font-size: 10px;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 10px;
+}
+
+
+.progress-top strong {
+
+    color: #38BDF8;
+}
+
+
+.progress-bar {
+
+    width: 100%;
+
+    height: 7px;
+
+    background:
+        rgba(148,163,184,.1);
+
+    overflow: hidden;
+}
+
+
+.progress-fill {
+
+    width: 0%;
+
+    height: 100%;
+
+    background:
+        linear-gradient(
+            90deg,
+            #38BDF8,
+            #22D3EE,
+            #22C55E
+        );
+
+    box-shadow:
+        0 0 12px #38BDF8;
+
+    transition:
+        width .6s ease;
+}
+
+
+.progress-status {
+
+    margin-top: 9px;
+
+    color: #475569;
+
+    font-size: 8px;
+
+    letter-spacing: 2px;
+}
+
+
+.progress-status span {
+
+    color: #22C55E;
+}
+
+
+/* =========================================================
+   ACHIEVEMENT GRID
+========================================================= */
+
+.achievement-grid {
+
+    width: min(900px, 94vw);
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 18px;
+}
+
+
+/* =========================================================
+   CARD
+========================================================= */
+
+.achievement-card {
+
+    position: relative;
+
+    min-height: 190px;
+
+    padding: 22px;
+
+    display: grid;
+
+    grid-template-columns:
+        50px 1fr;
+
+    column-gap: 18px;
+
+    border:
+        1px solid rgba(56,189,248,.18);
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(8,20,40,.9),
+            rgba(4,7,20,.9)
+        );
+
+    overflow: hidden;
+
+    transition:
+        transform .3s ease,
+        border-color .3s ease,
+        box-shadow .3s ease;
+}
+
+
+.achievement-card::before {
+
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    top: 0;
+
+    width: 3px;
+    height: 100%;
+
+    background:
+        #38BDF8;
+
+    opacity: .2;
+}
+
+
+.achievement-card:hover {
+
+    transform:
+        translateY(-4px);
+
+    border-color:
+        rgba(56,189,248,.55);
+
+    box-shadow:
+        0 0 20px rgba(56,189,248,.12);
+}
+
+
+/* =========================================================
+   NUMBER
+========================================================= */
+
+.achievement-number {
+
+    position: absolute;
+
+    top: 10px;
+    right: 14px;
+
+    color: #334155;
+
+    font-size: 9px;
+
+    letter-spacing: 2px;
+}
+
+
+/* =========================================================
+   ICON
+========================================================= */
+
+.achievement-icon {
+
+    width: 48px;
+    height: 48px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border:
+        1px solid #38BDF8;
+
+    border-radius: 50%;
+
+    color: #38BDF8;
+
+    font-family:
+        "Orbitron",
+        sans-serif;
+
+    font-size: 22px;
+
+    box-shadow:
+        0 0 15px rgba(56,189,248,.15);
+}
+
+
+.achievement-icon.unknown {
+
+    color: #F43F5E;
+
+    border-color: #F43F5E;
+
+    box-shadow:
+        0 0 15px rgba(244,63,94,.15);
+}
+
+
+/* =========================================================
+   INFO
+========================================================= */
+
+.achievement-code {
+
+    color: #475569;
+
+    font-size: 8px;
+
+    letter-spacing: 3px;
+}
+
+
+.achievement-info h3 {
+
+    margin-top: 5px;
+
+    color: #E0F2FE;
+
+    font-family:
+        "Orbitron",
+        sans-serif;
+
+    font-size: 17px;
+
+    letter-spacing: 2px;
+}
+
+
+.achievement-info p {
+
+    margin-top: 8px;
+
+    color: #64748B;
+
+    font-size: 10px;
+
+    line-height: 1.6;
+}
+
+
+.unlock-status {
+
+    margin-top: 12px;
+
+    color: #F43F5E;
+
+    font-size: 9px;
+
+    letter-spacing: 1px;
+}
+
+
+/* =========================================================
+   SUIT REWARD
+========================================================= */
+
+.suit-unlock {
+
+    grid-column:
+        1 / -1;
+
+    margin-top: 15px;
+
+    padding-top: 12px;
+
+    border-top:
+        1px solid rgba(56,189,248,.1);
+}
+
+
+.suit-unlock span {
+
+    display: block;
+
+    color: #475569;
+
+    font-size: 7px;
+
+    letter-spacing: 3px;
+}
+
+
+.suit-unlock strong {
+
+    display: block;
+
+    margin-top: 5px;
+
+    color: #64748B;
+
+    font-family:
+        "Orbitron",
+        sans-serif;
+
+    font-size: 10px;
+
+    letter-spacing: 2px;
+}
+
+
+/* =========================================================
+   UNLOCKED
+========================================================= */
+
+.achievement-card.unlocked {
+
+    border-color:
+        rgba(34,197,94,.45);
+
+    box-shadow:
+        0 0 18px rgba(34,197,94,.08);
+}
+
+
+.achievement-card.unlocked::before {
+
+    background:
+        #22C55E;
+
+    opacity: 1;
+
+    box-shadow:
+        0 0 15px #22C55E;
+}
+
+
+.achievement-card.unlocked
+.achievement-icon {
+
+    color: #22C55E;
+
+    border-color: #22C55E;
+
+    box-shadow:
+        0 0 18px rgba(34,197,94,.3);
+}
+
+
+.achievement-card.unlocked
+.unlock-status {
+
+    color: #22C55E;
+}
+
+
+.achievement-card.unlocked
+.suit-unlock strong {
+
+    color: #E0F2FE;
+
+    text-shadow:
+        0 0 8px #38BDF8;
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.achievement-footer {
+
+    position: fixed;
+
+    left: 0;
+    bottom: 0;
+
+    width: 100%;
+
+    height: 55px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content:
+        space-between;
+
+    padding: 0 30px;
+
+    border-top:
+        1px solid rgba(56,189,248,.15);
+
+    background:
+        rgba(1,3,11,.9);
+
+    color: #475569;
+
+    font-size: 8px;
+
+    letter-spacing: 2px;
+
+    z-index: 20;
+}
+
+
+.achievement-footer span:nth-child(2) {
+
+    color: #38BDF8;
+
+    animation:
+        footerPulse 2s infinite;
+}
+
+
+@keyframes footerPulse {
+
+    50% {
+        opacity: .35;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 800px) {
+
+    .achievement-header {
+
+        grid-template-columns: 1fr;
+
+        height: 80px;
+
+        text-align: center;
+
+        padding: 10px;
+    }
+
+
+    .header-status,
+    .mission-status {
+
+        display: none;
+    }
+
+
+    .header-title h1 {
+
+        font-size: 20px;
+
+        letter-spacing: 4px;
+    }
+
+
+    .achievement-container {
+
+        padding:
+            30px 15px 80px;
+    }
+
+
+    .achievement-grid {
+
+        grid-template-columns: 1fr;
+    }
+
+
+    .achievement-card {
+
+        min-height: 180px;
+    }
+
+
+    .back-button {
+
+        top: 15px;
+        left: 15px;
+
+        padding: 9px 12px;
+
+        font-size: 10px;
+    }
+
+
+    .achievement-footer span:last-child {
+
+        display: none;
+    }
+
+}

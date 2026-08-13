@@ -1,0 +1,224 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Mission BEEST // Achievements</title>
+
+    <link rel="stylesheet" href="achievements.css" />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Share+Tech+Mono&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <audio id="pageMusic" loop preload="auto">
+      <source src="assets/new-worlds.mp3" type="audio/mpeg" />
+    </audio>
+    <div class="achievement-screen">
+      <!-- BACKGROUND -->
+
+      <div class="space-grid"></div>
+
+      <div class="stars"></div>
+
+      <div class="stars stars-2"></div>
+
+      <!-- BACK BUTTON -->
+
+      <button type="button" class="back-button" id="backToMission">
+        ← BACK TO MISSION
+      </button>
+
+      <!-- HEADER -->
+
+      <header class="achievement-header">
+        <div class="header-status">
+          <span class="status-dot"></span>
+
+          SYSTEM ONLINE
+        </div>
+
+        <div class="header-title">
+          <span> EARTH BASE // MISSION RECORD </span>
+
+          <h1>ACHIEVEMENTS</h1>
+
+          <small> NOVA // PROGRESSION DATABASE </small>
+        </div>
+
+        <div class="mission-status">
+          MISSION BEEST
+
+          <strong>ACTIVE</strong>
+        </div>
+      </header>
+
+      <!-- MAIN -->
+
+      <main class="achievement-container">
+        <!-- TITLE -->
+
+        <section class="achievement-intro">
+          <span> CLASSIFIED MISSION RECORD </span>
+
+          <h2>NOVA'S JOURNEY</h2>
+
+          <p>Complete planetary missions to unlock new exploration suits.</p>
+        </section>
+
+        <!-- PROGRESS -->
+
+        <section class="progress-panel">
+          <div class="progress-top">
+            <span> MISSION PROGRESS </span>
+
+            <strong id="progressText"> 0 / 4 </strong>
+          </div>
+
+          <div class="progress-bar">
+            <div class="progress-fill" id="progressFill"></div>
+          </div>
+
+          <div class="progress-status">
+            SUITS UNLOCKED:
+            <span id="suitProgress"> 1 / 5 </span>
+          </div>
+        </section>
+
+        <!-- ACHIEVEMENTS -->
+
+        <section class="achievement-grid" id="achievementGrid">
+          <!-- MERCURY -->
+
+          <article
+            class="achievement-card locked"
+            data-required="1"
+            data-suit="MERCURY"
+          >
+            <div class="achievement-number">01</div>
+
+            <div class="achievement-icon">☿</div>
+
+            <div class="achievement-info">
+              <span class="achievement-code"> ACH // 01 </span>
+
+              <h3>MERCURY SCOUT</h3>
+
+              <p>Complete the Mercury mission.</p>
+
+              <div class="unlock-status">🔒 CLASSIFIED</div>
+            </div>
+
+            <div class="suit-unlock">
+              <span> SUIT REWARD </span>
+
+              <strong> MERCURY SUIT </strong>
+            </div>
+          </article>
+
+          <!-- VENUS -->
+
+          <article
+            class="achievement-card locked"
+            data-required="2"
+            data-suit="VENUS"
+          >
+            <div class="achievement-number">02</div>
+
+            <div class="achievement-icon">♀</div>
+
+            <div class="achievement-info">
+              <span class="achievement-code"> ACH // 02 </span>
+
+              <h3>VENUS SURVIVOR</h3>
+
+              <p>Complete the Venus mission.</p>
+
+              <div class="unlock-status">🔒 CLASSIFIED</div>
+            </div>
+
+            <div class="suit-unlock">
+              <span> SUIT REWARD </span>
+
+              <strong> VENUS SUIT </strong>
+            </div>
+          </article>
+
+          <!-- MARS -->
+
+          <article
+            class="achievement-card locked"
+            data-required="3"
+            data-suit="MARS"
+          >
+            <div class="achievement-number">03</div>
+
+            <div class="achievement-icon">♂</div>
+
+            <div class="achievement-info">
+              <span class="achievement-code"> ACH // 03 </span>
+
+              <h3>MARS EXPLORER</h3>
+
+              <p>Complete the Mars mission.</p>
+
+              <div class="unlock-status">🔒 CLASSIFIED</div>
+            </div>
+
+            <div class="suit-unlock">
+              <span> SUIT REWARD </span>
+
+              <strong> MARS SUIT </strong>
+            </div>
+          </article>
+
+          <!-- UNKNOWN -->
+
+          <article
+            class="achievement-card locked"
+            data-required="4"
+            data-suit="UNKNOWN"
+          >
+            <div class="achievement-number">04</div>
+
+            <div class="achievement-icon unknown">?</div>
+
+            <div class="achievement-info">
+              <span class="achievement-code"> ACH // 04 </span>
+
+              <h3>UNKNOWN CONTACT</h3>
+
+              <p>Complete the unidentified planetary mission.</p>
+
+              <div class="unlock-status">🔒 CLASSIFIED</div>
+            </div>
+
+            <div class="suit-unlock">
+              <span> SUIT REWARD </span>
+
+              <strong> UNKNOWN SUIT </strong>
+            </div>
+          </article>
+        </section>
+      </main>
+
+      <!-- FOOTER -->
+
+      <footer class="achievement-footer">
+        <span> ◈ MISSION BEEST </span>
+
+        <span> ACHIEVEMENT DATABASE </span>
+
+        <span> 2026 // EARTH BASE </span>
+      </footer>
+    </div>
+
+    <script src="achievements.js"></script>
+    <script src="music.js"></script>
+  </body>
+</html>

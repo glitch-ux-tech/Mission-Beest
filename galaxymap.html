@@ -1,0 +1,308 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Mission BEEST // Galaxy Map</title>
+
+    <link rel="stylesheet" href="galaxymap.css" />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Share+Tech+Mono&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <audio id="pageMusic" loop preload="auto">
+      <source src="assets/new-worlds.mp3" type="audio/mpeg" />
+    </audio>
+    <!-- =====================================================
+         GALAXY SCREEN
+    ====================================================== -->
+
+    <div class="galaxy-screen">
+      <!-- BACK TO MISSION -->
+      <button tyepe="button" class="back-button" id="backToMission">
+        ← BACK TO MISSION
+      </button>
+      <!-- BACKGROUND -->
+      <div class="space-grid"></div>
+      <div class="stars"></div>
+      <div class="stars stars-2"></div>
+
+      <!-- =================================================
+             TOP HUD
+        ================================================== -->
+
+      <header class="galaxy-header">
+        <div class="system-status">
+          <span class="status-dot"></span>
+          SYSTEM ONLINE
+        </div>
+
+        <div class="galaxy-title">
+          <span class="small-title"> EARTH BASE // NAVIGATION SYSTEM </span>
+
+          <h1>GALACTIC MAP</h1>
+
+          <span class="coordinates"> SOL SYSTEM // SECTOR 01 </span>
+        </div>
+
+        <div class="mission-clock">
+          MISSION BEEST
+          <span>ACTIVE</span>
+        </div>
+      </header>
+
+      <!-- =================================================
+             MAIN MAP
+        ================================================== -->
+
+      <main class="map-container">
+        <!-- ORBIT LINES -->
+
+        <div class="orbit orbit-1"></div>
+        <div class="orbit orbit-2"></div>
+        <div class="orbit orbit-3"></div>
+        <div class="orbit orbit-4"></div>
+
+        <!-- SUN -->
+
+        <div class="sun">
+          <div class="sun-core"></div>
+
+          <div class="sun-glow"></div>
+
+          <span>SOL</span>
+        </div>
+
+        <!-- =================================================
+                 EARTH BASE
+            ================================================== -->
+
+        <button
+          class="planet earth"
+          data-planet="earth"
+          aria-label="Earth Base"
+        >
+          <div class="planet-body"></div>
+
+          <div class="planet-glow"></div>
+
+          <div class="planet-ring"></div>
+
+          <span class="planet-label">
+            EARTH
+            <small>BASE</small>
+          </span>
+
+          <span class="signal"> ◉ </span>
+        </button>
+
+        <!-- =================================================
+                 MERCURY
+            ================================================== -->
+
+        <button
+          class="planet mercury"
+          data-planet="mercury"
+          aria-label="Mercury"
+        >
+          <div class="planet-body"></div>
+          <div class="planet-glow"></div>
+
+          <span class="planet-label"> MERCURY </span>
+
+          <span class="planet-status"> ● </span>
+        </button>
+
+        <!-- =================================================
+                 VENUS
+            ================================================== -->
+
+        <button class="planet venus" data-planet="venus" aria-label="Venus">
+          <div class="planet-body"></div>
+          <div class="planet-glow"></div>
+
+          <span class="planet-label"> VENUS </span>
+
+          <span class="planet-status"> ● </span>
+        </button>
+
+        <!-- =================================================
+                 MARS
+            ================================================== -->
+
+        <button class="planet mars" data-planet="mars" aria-label="Mars">
+          <div class="planet-body"></div>
+          <div class="planet-glow"></div>
+
+          <span class="planet-label"> MARS </span>
+
+          <span class="planet-status"> ● </span>
+        </button>
+
+        <!-- =================================================
+                 UNKNOWN PLANET
+            ================================================== -->
+
+        <button
+          class="planet unknown"
+          data-planet="unknown"
+          aria-label="Unknown Planet"
+        >
+          <div class="unknown-body">
+            <div class="unknown-glitch"></div>
+
+            <span>?</span>
+          </div>
+
+          <div class="planet-glow"></div>
+
+          <span class="planet-label">
+            UNKNOWN
+            <small>OBJECT</small>
+          </span>
+
+          <span class="unknown-signal"> SIGNAL </span>
+        </button>
+
+        <!-- =================================================
+                 CONNECTION LINE
+            ================================================== -->
+
+        <div class="navigation-line earth-line"></div>
+
+        <!-- =================================================
+                 MAP LEGEND
+            ================================================== -->
+
+        <div class="map-legend">
+          <div>
+            <span class="legend-dot earth-dot"></span>
+            EARTH BASE
+          </div>
+
+          <div>
+            <span class="legend-dot active-dot"></span>
+            PLANETARY DATA
+          </div>
+
+          <div>
+            <span class="legend-dot unknown-dot"></span>
+            UNIDENTIFIED
+          </div>
+        </div>
+      </main>
+
+      <!-- =================================================
+             SIDE HUD
+        ================================================== -->
+
+      <aside class="side-hud">
+        <div class="hud-line"></div>
+
+        <span>MISSION TELEMETRY</span>
+
+        <div class="telemetry-row">
+          <span>BASE</span>
+          <strong>EARTH</strong>
+        </div>
+
+        <div class="telemetry-row">
+          <span>KNOWN WORLDS</span>
+          <strong>03</strong>
+        </div>
+
+        <div class="telemetry-row">
+          <span>UNKNOWN SIGNAL</span>
+          <strong class="red-text">DETECTED</strong>
+        </div>
+
+        <div class="telemetry-row">
+          <span>MISSION STATUS</span>
+          <strong class="green-text">ACTIVE</strong>
+        </div>
+      </aside>
+
+      <!-- =================================================
+             PLANET HOLOGRAM POPUP
+        ================================================== -->
+
+      <div id="planetPopup" class="planet-popup">
+        <div class="hologram-box">
+          <button id="closePlanetPopup" class="popup-close">×</button>
+
+          <div class="holo-scan"></div>
+
+          <div class="popup-header">
+            <span id="popupSector"> PLANETARY DATABASE </span>
+
+            <h2 id="popupTitle">PLANET</h2>
+
+            <div id="popupStatus" class="popup-status">STATUS: UNKNOWN</div>
+          </div>
+
+          <div class="popup-divider"></div>
+
+          <div class="popup-content">
+            <div class="hologram-planet">
+              <div id="holoPlanet" class="holo-planet"></div>
+
+              <div class="scan-circle"></div>
+            </div>
+
+            <div class="planet-data">
+              <div class="data-row">
+                <span> CLASSIFICATION </span>
+
+                <strong id="popupClass"> UNKNOWN </strong>
+              </div>
+
+              <div class="data-row">
+                <span> DISTANCE </span>
+
+                <strong id="popupDistance"> --- </strong>
+              </div>
+
+              <div class="data-row">
+                <span> SIGNAL </span>
+
+                <strong id="popupSignal"> --- </strong>
+              </div>
+
+              <div class="data-row">
+                <span> MISSION NOTE </span>
+
+                <p id="popupDescription">---</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="popup-footer">
+            <span id="popupWarning"> EARTH BASE // SECURE CONNECTION </span>
+
+            <span> BEEST-NAV // 01 </span>
+          </div>
+        </div>
+      </div>
+
+      <!-- =================================================
+             BOTTOM HUD
+        ================================================== -->
+
+      <footer class="map-footer">
+        <span> ◈ NAVIGATION SYSTEM </span>
+
+        <span> CLICK PLANET TO SCAN </span>
+
+        <span> MISSION BEEST © 2026 </span>
+      </footer>
+    </div>
+
+    <script src="galaxymap.js"></script>
+    <script src="music.js"></script>
+  </body>
+</html>

@@ -1,0 +1,2820 @@
+
+header{
+  padding-bottom: 210px;
+  position: relative;
+  z-index: 2;
+}
+#website main h1 {
+    background: #1E1B4B;
+    color: #F8FAFC;
+    font-family: "Orbitron", sans-serif;
+    font-weight: 700;
+    text-align: center;
+
+    border: 1px solid #312E81;
+    min-height: 38px;
+    border-radius: 15px;
+
+    padding: 10px 20px;
+    margin-left: 0;
+
+    animation: galacticGlow 3s ease-in-out infinite;
+}
+
+@keyframes galacticGlow {
+
+    0% {
+        color: #F8FAFC;
+        text-shadow: 0 0 10px #38BDF8;
+        box-shadow: 0 0 10px rgba(56, 189, 248, 0.3);
+    }
+
+    50% {
+        color: #FACC15;
+        text-shadow:
+            0 0 8px #FACC15,
+            0 0 20px #FACC15,
+            0 0 35px #FF7A18;
+
+        box-shadow:
+            0 0 15px #FACC15,
+            0 0 30px rgba(255, 122, 24, 0.5);
+    }
+
+    100% {
+        color: #F8FAFC;
+        text-shadow: 0 0 10px #38BDF8;
+        box-shadow: 0 0 10px rgba(56, 189, 248, 0.3);
+    }
+}
+      h2 {
+        font-family:"Share Tech Mono" , sans-serif;
+        text-align: center;
+        font-weight: bold;
+        font-size: 30px;
+        line-height: 40px;
+        columns: #CBD5E1;
+      
+      }
+
+      .hero-title{
+        
+        animation: heroZoom 1.4s ease-out forwards;
+      }
+
+
+      @keyframes heroZoom {
+
+        0% {
+
+           transform: scale(3);
+           opacity: 0;
+           filter: blur(20px);
+
+
+        }
+
+        60% {
+
+
+            transform: scale(0.9);
+            opacity: 1;
+            filter: blur(0);
+
+
+        }
+
+        100%{
+
+           transform: scale(1);
+
+
+        }
+        
+      }
+       h3 {
+        font-family: Arial, sans-serif;
+        text-align: center;
+        font-weight: bold;
+        font-size: 25px;
+        line-height: 30px; 
+      }
+
+       h4 {
+        font-family: Arial, sans-serif;
+        text-align: center;
+        font-weight: bold;
+        font-size: 20px;
+        line-height: 25px;
+      
+      }
+
+      .stars{
+
+
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+        overflow: hidden;
+        z-index: -1;
+      }
+      
+
+      .spark{
+
+        position: absolute;
+        width: 4px;
+        height: 4px;
+        background: white;
+        border-radius: 50%;
+        box-shadow: 
+        0 0 5px white,
+        0 0 10px white,
+        0 0 18px white
+        ;
+
+        animation: twinkle 2.5s infinite ease-in-out;
+      }
+
+
+      .spark:nth-child(1){ top:10%; left:8%;animation-delay: 0s;}
+      .spark:nth-child(2){ top:25%; left:20%;animation-delay: 4s;}
+      .spark:nth-child(3){ top:18%; left:18%;animation-delay: 8s;}
+      .spark:nth-child(4){ top:40%; left:40%;animation-delay: 1.1s;}
+      .spark:nth-child(5){ top:65%; left:65%;animation-delay: 1.4s;}
+      .spark:nth-child(6){ top:75%; left:75%;animation-delay: 2s;}
+      .spark:nth-child(7){ top:55%; left:55%;animation-delay: 2s;}
+      .spark:nth-child(8){ top:82%; left:82%;animation-delay: 0.6s;}
+      .spark:nth-child(9){ top:35%; left:35%;animation-delay: 1.7s;}
+      .spark:nth-child(10){ top:90%; left:90%;animation-delay: 2.3s;}
+
+
+       @keyframes twinkle{
+
+        0%, 100% {
+
+         opacity: 0.2;
+         transform: scale(0.5) translateY(0);
+
+
+
+        }
+
+        50%{
+
+          opacity: 1;
+          transform: scale(1.8) translateY(-3px);
+        }
+        
+       }
+
+      
+      .intro {
+        
+        
+        
+        font-family: consolas, monospace;
+        font-size: 20px;
+        border: none;
+        font-weight: bold;
+        font-style: italic;
+        color:  #E8F2F7;
+
+
+      }
+
+
+     .navbar {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        height: 95px;
+        font-size: 30px;
+        padding: 20px;
+        color:white;
+        gap: 70px;
+        margin-top: 60px;
+        margin-left: 0px;
+        margin-right: 50px;
+       transform: translateX(30px);
+       background: rgba(15,23,42,0.75);
+       backdrop-filter: blur(8px);
+       border: 2px solid rgba(56,189,248,0.4);
+       border-radius: 20px;
+        box-shadow:
+        0 0 12px rgba(56, 189, 248, 0.4),
+        0 0 30px rgba(56, 189, 248, 0.2);
+       transition: all 0.35s ease;
+      
+      
+            
+      }
+    .navbar:hover{
+      box-shadow: 
+      0 0 20px rgba(56, 189, 248, 0.6),
+      0 0 45px rgba(56, 189, 248, 0.35);
+
+      transform: translateY(-3px);
+    }
+      .navlist {
+        display: flex;
+        flex-direction: column;   
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        overflow: hidden;
+        width:280px;
+        max-width: 280px;
+        flex: 1;
+        margin-top: 20px;
+        gap: 12px;
+        font-family: "Orbitron", sans-serif;
+        font-size: 20px;
+        font-weight: bold;
+        font-style: italic;
+        color:   #7DD3FC;
+        text-align: center;
+        cursor: pointer;
+        background: rgba(15, 23, 42, 0.9);
+        border-radius: 16px;
+        transform: translateY(-6px);
+        transition: all .3s ease;
+        box-shadow:
+        0 0 8px rgba(255, 255, 255, 0.25),
+        0 0 16px rgba(255, 255, 255, 0.15),
+        0 0 28px rgba(56, 189, 248, 0.15);
+
+      }
+         .navlist::before{
+
+        content: "";
+        position: absolute;
+
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+
+        background:linear-gradient(
+        90deg,
+        transparent,
+        rgba(56,189,248,0.8),
+        transparent
+
+        );
+      }
+
+      .navlist:hover {
+       transform: translateY(-9px);
+       box-shadow:
+        0 0 12px rgba(255, 255, 255, 0.6),
+        0 0 25px rgba(255, 255, 255, 0.4),
+        0 0 40px rgba(56, 189, 248, 0.6);
+}
+
+
+      .navlist:hover::before{
+        animation: scan 1s linear;
+      }
+
+         .navlist:active{
+         color:#FACC15;
+         }
+      @keyframes scan{
+
+        from{
+          left:-100%;
+        }
+        to{
+          left: 100%;
+        }
+      }
+
+       #navlist1 {
+         width:280px;
+         background: #0F172A;
+        border: 2px solid #38BDF8;
+        box-shadow: 0 0 12px #38BDF8;
+        transition: 0.3s;
+         }
+
+         #navlist1:hover{
+
+        border: color #38BDF8; 
+        box-shadow: 0 0 20px #38bdf8;
+        transform: translateY(-4px);
+        }
+
+        #navlist2 {
+        width:280px;
+        background: #0F172A;
+        border: 2px solid #8B5CF6;
+        box-shadow: 0 0 12px #8B5CF6;
+        transition: 0.3s;
+         }
+
+        #navlist2:hover{
+        border-color:#8B5CF6 ;
+        box-shadow: 0 0 20px #8B5CF6;
+        transform:translateY(-4px) ;
+         }
+
+         #navlist3 {
+        width:280px;
+        background: #0F172A;
+        border: 2px solid #FACC15;
+        box-shadow: 0 0 12px #FACC15;
+        transition: 0.3s;
+        }
+
+        #navlist3:hover{
+        border: color #FACC15; 
+        box-shadow: 0 0 20px #FACC15 ;
+        transform: translateY(-4px) ;
+         }
+      
+      @keyframes float {
+        0%,100% {
+
+          transform: translateY(0);
+        }
+        50% {
+
+          transform: translateY(-4px);
+            }
+        }
+        
+      
+      .rocket, .galaxy, .trophy{
+
+        display:inline-block;
+        animation: float 2s ease-in-out infinite;
+        
+      }
+  
+      .subtitle{
+        margin-top: 8px;
+        font-size: 13px;
+        color: #94a3b8;
+        letter-spacing: 1px;
+      }
+
+      body {
+      margin: 0;
+      overflow-x: hidden;
+      background-color:#020617;
+      background-image:
+      linear-gradient(rgba(0,255,255,0.06) 1px, transparent 1px),
+      linear-gradient(90deg,rgba(0,255,255,0.06) 1px, transparent 1px),
+      radial-gradient(circle at center, #162447 0%,#0B1020 70%);
+
+      background-size: 50px 50px, 50px 50px, 100% 100%;
+      
+      }
+
+
+     .main-content {
+        text-align: center;
+        margin-top: 40px;
+        font-family: consolas, monospace;
+        font-size: 20px;
+        border: none;
+        font-weight: bold;
+        font-style: italic;
+        color:  #38BDF8;
+      }
+
+    .encrypted-warning{
+
+      transition: transform 0.02s;
+    }
+
+    .glitch {
+
+      position: relative;
+      display: inline-block;
+
+    }
+
+    .glitch::before,
+    .glitch::after{
+
+      content: attr(data-text);
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      overflow: hidden;
+      opacity: 0;
+    }
+
+    .glitch::before{
+
+      color: #22D3EE;
+      left: -2px;
+      text-shadow: -2px 0 #22D3EE;
+      animation: glitch 2s infinite;
+    }
+
+    .glitch::after{
+
+      color: #FF2D95;
+      left: -1px;
+      text-shadow: 2px 0 #FF2D95;
+      animation: glitch 2s infinite;
+    }
+
+    @keyframes glitch {
+      0%,90%,100%{
+
+       clip-path: inset(0 0 0 0);
+       transform: translate(0);
+
+
+      }
+
+      91% {
+
+        clip-path: inset(20% 0 55% 0);
+        transform: translate(-3px);
+        opacity: 1;
+      }
+
+      93%{
+
+       clip-path: inset(20% 0 55% 0);
+       transform: translate(3px);
+
+      }
+
+      95% {
+
+         clip-path: inset(35% 0 35% 0);
+         transform: translate(-2px);
+
+      }
+      
+    }
+
+    @keyframes glitch2 {
+
+      0%,90%,100%{
+
+     clip-path: inset(0 0 0 0);
+     transform: translate(0);
+
+      }
+
+      92%{
+
+        clip-path: inset(50% 0 20% 0);
+        transform: translate(2px);
+
+
+
+
+      }
+
+      94%{
+      
+        clip-path: inset(10% 0 70% 0);
+        transform: translate(-3px);
+
+
+      }
+
+      96% {
+            
+        clip-path: inset(40% 0 30% 0);
+        transform: translate(2px);
+        opacity: 0;
+
+
+      }
+      
+    }
+       
+      
+    .mission-info{
+    display: none;
+    opacity: 0;
+    transition: opacity .8s ease;
+
+    align-items: flex-start;
+    justify-content: center;
+    gap: 60px;
+    padding: 60px;
+    background: black;
+    border: 5px outset #64748B;
+    border-radius: 10px;
+    width: fit-content;
+    margin: 40px auto;
+}
+    
+    
+
+      .mission-paragraph{
+      font-family: "Share Tech Mono", monospace;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      width: fit-content;
+      animation: blinking 800ms infinite;
+      text-align: left;
+      font-size: 22px;
+      color: #aaacec;
+      text-shadow: 0 0 10px #38BDF8;
+      border-right: 4px solid white;
+      padding-right: 12px;
+      line-height: 1.8;
+     
+ 
+      
+      
+      
+   }
+
+
+      @keyframes blinking {
+
+          0%{
+              border-color: #CBD5E1;
+
+          }
+
+          50%{
+             border-color: transparent;
+
+          }
+
+        
+      }
+
+    .after-mission{
+    display:none;
+}
+    .terminal-title{
+          color:#FACC15;
+          margin-bottom: 35px;
+          letter-spacing: 3px;
+          text-shadow: 0 0 5px #FACC15;
+
+    }
+     .terminal-current{
+    font-size:24px;
+    color:#22D3EE;
+    text-shadow:0 0 10px #38BDF8;
+    min-height:40px;
+    margin:30px 0;
+    white-space:pre;
+}
+
+.loading-box{
+    width:450px;
+    height:18px;
+    background:#111;
+    border-radius:20px;
+    overflow:hidden;
+    border:2px solid #22D3EE;
+    margin-top:30px;
+    overflow: hidden;
+    border: 2px solid #FFFFFF;
+    border-radius: 0px;
+}
+
+.loading-bar{
+    width:0%;
+    height:100%;
+    border-radius: 0px;
+    background: repeating-linear-gradient(
+      90deg,
+      #FFFFFF 0px,
+      #FFFFFF 10px,
+      transparent 10px,
+      transparent 13px
+
+    );
+    transition:width .4s linear;
+}
+        .encrypted-terminal{
+
+    width:700px;
+
+    margin:80px auto;
+
+    padding:35px;
+
+    background:#020617;
+
+    border:2px solid #38BDF8;
+    border-radius:18px;
+
+    font-family:"Share Tech Mono", monospace;
+
+    text-align:left;
+
+    box-shadow:0 0 18px rgba(56,189,248,.4);
+
+    display:block;
+
+    opacity:1;
+
+    transition:opacity .8s ease;
+}
+.encrypted-title{
+
+    color:#FACC15;
+    text-align:center;
+    margin-bottom:30px;
+
+    letter-spacing:3px;
+
+    text-shadow:0 0 12px #FACC15;
+
+}
+
+.encrypted-line{
+
+    color:#38BDF8;
+
+    font-size:22px;
+
+    margin:18px 0;
+
+    text-shadow:0 0 8px #38BDF8;
+
+}
+
+.encrypted-warning{
+
+    color:#FACC15;
+
+    font-size:24px;
+
+    text-align:center;
+
+    animation:blinkSignal .9s infinite;
+
+}
+
+@keyframes blinkSignal{
+
+    50%{
+
+        opacity:.25;
+
+    }
+
+}
+    
+      
+      
+
+      
+
+        
+      
+
+      
+
+
+    
+     .beginning {
+        text-align: center;
+        margin-top: 20px;
+        font-family: "Orbitron", sans-serif;
+        font-size: 20px;
+        border: none;
+        font-weight: bold;
+        font-style: italic;
+        color:  #FACC15;
+        text-shadow: 0 0 12px #FACC15;;
+
+      }
+      .mission-button {
+        background-color:  #FF7A18;
+        color: white;
+        border-width: 2px;
+        border-style: solid;
+        border-color: #FFD166;
+        padding: 18px 36px;
+        border-radius: 12px;
+        height: auto;   
+        cursor: pointer;
+        border-radius: 12px;
+        font-size: 20px;
+        font-family:"Press Start 2P", cursive;
+        text-align: center;
+        transition: all 0.3s ease;
+        box-shadow: 0px 0px 15px #FF7A18;
+        animation: pulse 3s infinite;
+        }
+
+
+      @keyframes pulse {
+        0% { box-shadow: 0 0 10px #38BDF8; }
+        50% { box-shadow: 0 0 30px #38BDF8; }
+        100% { box-shadow: 0 0 10px #38bdf8; }
+      }
+
+
+      .mission-button:hover {
+      background: #FF9A3D;
+       color: white;
+       transform: scale(1.08);
+       box-shadow: 0 0 25px #8B5CF6;
+        
+       
+      }
+
+      .mission-button:active {
+        background: #E85D04;
+        box-shadow: 0 0 10px #1D4ED8;
+         transform: scale(0.95);
+      }
+   footer {
+    position: relative;
+    overflow: hidden;
+
+    text-align: center;
+    margin-top: 20px;
+    padding: 35px 10px 20px;
+
+    background: #020617;
+
+    border-top: 1px solid rgba(56, 189, 248, 0.35);
+
+    color: #64748B;
+    font-family: "Share Tech Mono", monospace;
+
+    box-shadow:
+        0 -5px 25px rgba(56, 189, 248, 0.08);
+  }
+
+      .hero{
+  position: relative;
+  overflow:hidden;
+  padding-bottom: 40px;
+}
+
+     
+.stars-group{
+
+    position:absolute;
+    top:45px;      
+    right:-30px;  
+    width:260px;
+    height:340px;
+    pointer-events:none;
+   
+
+}
+.star-small{
+    position: absolute;
+    top: 10px;;
+    left: 50px;   
+    width:100px;
+    z-index: 10;
+    opacity: 1;
+    transform: scaleX(-1);
+}
+
+.star-medium{
+  position: absolute;
+   top: 10px;
+   right:10px;
+   width:100px;
+   opacity: 1;
+   z-index: 10;
+   transform: scaleY(-1);
+   
+}
+.star-large{
+  position: absolute;
+  top: 820px;
+  right: 20px;
+  width: 100px;
+  opacity: 1;
+  z-index: 10;
+    
+    
+    
+}
+ 
+
+#intro-screen{
+
+
+   
+  position: fixed;
+
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100vh;
+
+  background: #020617;
+
+  overflow: hidden;
+
+  z-index: 99999;
+
+  transition: opacity 1.5s;
+
+}
+
+#intro{
+
+
+  position: fixed;
+  top: 0;
+
+  left: 0;
+
+  width: 100%;
+
+  height: 100vh;
+
+  background: #000;
+
+  overflow: hidden;
+
+  z-index: 99999;
+}
+
+
+#website{
+
+  opacity: 0;
+  position: relative;
+  overflow: hidden;
+
+
+
+}
+
+#warpCanvas{
+
+position:absolute;
+inset:0;
+
+width:100%;
+height:100%;
+
+z-index:3;
+
+}
+
+@keyframes canvasFade{
+
+from{
+
+opacity:0;
+
+}
+
+to{
+
+opacity:1;
+
+}
+
+}
+
+.blackIntro{
+
+
+   position: absolute;
+
+   top: 0;
+
+   left: 0;
+
+   width: 100%;
+
+   height: 100%;
+
+   background: black;
+   
+   z-index: 5;
+
+   animation: fadeBlack .8s forwards;
+
+}
+
+
+@keyframes fadeBlack {
+
+  0%{
+
+
+    opacity: 1;
+  }
+
+  100%{
+
+
+    opacity: 0%;
+  }
+  
+}
+ 
+.introGlow{
+    position:absolute;
+    bottom:-300px;
+    left:50%;
+    transform:translateX(-50%);
+
+    width:1600px;
+    height:800px;
+
+    border-radius:50%;
+
+    background:radial-gradient(
+        circle,
+        rgba(255,170,60,.95) 0%,
+        rgba(255,110,20,.55) 30%,
+        rgba(255,60,0,.25) 55%,
+        transparent 80%
+    );
+
+    filter:blur(120px);
+
+    opacity:0;
+
+    animation:introGlowRise 8s forwards;
+}
+
+@keyframes introGlowRise{
+
+
+  0%{
+
+    opacity:0;
+    transform: translateX(-50%) translateY(350px) scale(.5);
+
+  }
+
+  20%{
+
+     opacity: 1;
+
+
+  }
+
+  70%{
+
+    transform: translateX(-50%) translate(-120px) scale(1);
+
+
+  }
+
+  100% {
+
+    transform: translateX(-50%) translateY(-420px) scale(1.45);
+
+  }
+  
+}
+
+#ember{
+
+  position: absolute;
+  
+  inset: 0;
+
+  overflow: hidden;
+
+  pointer-events: none;
+
+  z-index: 4;
+
+
+
+}
+
+.ember{
+
+    position: absolute;
+    
+    bottom: -10px;
+
+    border-radius: 50px;
+     
+background: radial-gradient(circle,
+#fff 0%,
+#ffe8a3 20%,
+#ffbf4d 45%,
+#ff6b00 100%);
+
+    opacity: 0;
+
+    filter: blur(0.5px);
+
+    animation: rise linear forwards;
+
+
+
+}
+
+
+@keyframes rise {
+
+
+  0%{
+
+      opacity: 0;
+
+      transform: 
+      
+      translateY(0)
+      scale(.4);
+      
+      
+
+
+  }
+  
+
+  10%{
+
+     opacity: .8;
+
+
+
+
+  }
+
+
+  100%{
+
+     opacity: 0;
+
+     transform: 
+
+     translateY(-110vh)
+     scale(1);
+     
+     
+
+
+  }
+}
+
+
+
+
+#quote{
+
+
+  position: absolute;
+
+  top: 50%;
+
+  left: 50%;
+
+  transform: translate(-50%,-50%);
+
+  text-align: center;
+
+  opacity: 0;
+  
+
+  z-index: 8;
+
+  transition: opacity 1.5s ease;
+
+
+}
+
+
+.introQuote{
+
+  font-family: "Space Grotesk", serif;
+
+  font-size: 42px;
+
+  font-weight: 700;
+
+  color: white;
+
+  letter-spacing: 4px;
+
+  text-shadow: 
+  
+  0 0 20px white,
+  0 0 45px #38BDF8;
+
+  margin-bottom: 25px;
+  
+  
+  
+
+
+}
+
+#flash{
+
+    position:absolute;
+    inset:0;
+
+    background:white;
+
+    opacity:0;
+
+    pointer-events:none;
+
+    z-index:50;
+
+}
+
+
+.introMission{
+
+font-family:"Orbitron",sans-serif;
+
+font-size:39px;
+
+font-weight:900;
+
+letter-spacing:18px;
+
+text-transform:uppercase;
+
+color:#FFD166;
+
+text-shadow:
+0 0 8px #FFD166,
+0 0 18px #FFB347,
+0 0 40px #FF7A18,
+0 0 80px rgba(255,122,24,.6);
+
+
+
+animation:
+
+missionGlow 2.5s ease-in-out infinite,
+
+missionFloat 3s ease-in-out infinite;
+
+
+
+}
+
+@keyframes missionGlow{
+
+  0%,100%{
+
+    text-shadow:
+      0 0 20px #FFD166,
+      0 0 60px #FF7A18;
+
+  }
+
+  50%{
+
+    text-shadow:
+      0 0 35px #FFF5B0,
+      0 0 80px #FF9A3D,
+      0 0 120px #FF7A18;
+
+  }
+
+}
+
+@keyframes missionFloat{
+
+0%,100%{
+
+transform:translateY(0);
+
+}
+
+50%{
+
+transform:translateY(-6px);
+
+}
+
+}
+@keyframes camerashake{
+
+0%{transform:translate(0,0);}
+15%{transform:translate(-6px,3px);}
+30%{transform:translate(7px,-4px);}
+45%{transform:translate(-5px,-5px);}
+60%{transform:translate(6px,2px);}
+75%{transform:translate(-3px,3px);}
+100%{transform:translate(0,0);}
+
+}
+.shake{
+
+
+   animation: camerashake .55s ease;
+}
+
+
+.floating{
+    animation: quoteFloat 4s ease-in-out infinite;
+}
+
+@keyframes quoteFloat{
+
+  0%,100%{
+    transform: translate(-50%,-50%);
+  }
+
+  50%{
+    transform: translate(-50%,-56%);
+  }
+
+}
+
+
+.breathing{
+    animation: glowBreath 4s ease-in-out infinite;
+} 
+
+/* =========================================================
+   MISSION BRIEFING POPUP — FIXED VERSION
+   ========================================================= */
+
+#missionBriefing {
+    position: fixed !important;
+    inset: 0 !important;
+
+    width: 100vw !important;
+    height: 100vh !important;
+
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+
+    padding: 30px !important;
+
+    background: rgba(0, 0, 0, 0.88) !important;
+
+    backdrop-filter: blur(8px);
+
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+
+    z-index: 99999 !important;
+
+    transition:
+        opacity 0.35s ease,
+        visibility 0.35s ease;
+}
+
+
+/* OPEN */
+
+#missionBriefing.show {
+    opacity: 1 !important;
+    visibility: visible !important;
+    pointer-events: auto !important;
+}
+
+
+/* =========================================================
+   POPUP BOX
+   ========================================================= */
+
+#missionBriefing .info-popup-box {
+    position: relative;
+
+    width: min(850px, 90vw);
+    max-height: 85vh;
+
+    overflow-y: auto;
+
+    padding: 45px;
+
+    background: #020617 !important;
+
+    color: white !important;
+
+    border: 2px solid #ff7a18 !important;
+
+    box-shadow:
+        0 0 25px rgba(255, 122, 24, 0.6),
+        0 0 70px rgba(34, 211, 238, 0.15);
+
+    font-family: "Share Tech Mono", monospace;
+
+    transform: translateY(30px) scale(0.95);
+
+    transition:
+        transform 0.4s ease;
+}
+
+
+/* POPUP ANIMATION */
+
+#missionBriefing.show .info-popup-box {
+    transform: translateY(0) scale(1);
+}
+
+
+/* =========================================================
+   CLOSE BUTTON
+   ========================================================= */
+
+#missionBriefing .popup-close {
+    position: absolute;
+
+    top: 15px;
+    right: 18px;
+
+    width: 40px;
+    height: 40px;
+
+    background: transparent !important;
+
+    border: 1px solid #64748b;
+
+    color: white !important;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 28px;
+
+    line-height: 1;
+
+    cursor: pointer;
+
+    transition: 0.25s ease;
+}
+
+#missionBriefing .popup-close:hover {
+    color: #ff7a18 !important;
+
+    border-color: #ff7a18;
+
+    box-shadow:
+        0 0 15px rgba(255, 122, 24, 0.6);
+
+    transform: rotate(90deg);
+}
+
+
+/* =========================================================
+   POPUP HEADER
+   ========================================================= */
+
+#missionBriefing .popup-label {
+    color: #22d3ee !important;
+
+    font-family: "Share Tech Mono", monospace;
+
+    font-size: 12px;
+
+    letter-spacing: 4px;
+
+    margin-bottom: 15px;
+}
+
+
+#missionBriefing h2 {
+    margin: 0;
+
+    color: #ff7a18 !important;
+
+    font-family: "Orbitron", sans-serif;
+
+    font-size: clamp(2rem, 5vw, 3.5rem);
+
+    letter-spacing: 6px;
+
+    text-shadow:
+        0 0 15px rgba(255, 122, 24, 0.7);
+}
+
+
+#missionBriefing .popup-divider {
+    width: 100%;
+    height: 1px;
+
+    margin: 25px 0;
+
+    background:
+        linear-gradient(
+            90deg,
+            #ff7a18,
+            #22d3ee,
+            transparent
+        );
+}
+
+
+/* =========================================================
+   TEXT
+   ========================================================= */
+
+#missionBriefing h3 {
+    margin-top: 25px;
+
+    color: #facc15 !important;
+
+    font-family: "Orbitron", sans-serif;
+
+    font-size: 17px;
+
+    letter-spacing: 3px;
+}
+
+
+#missionBriefing p {
+    color: #cbd5e1 !important;
+
+    font-family: "Share Tech Mono", monospace;
+
+    font-size: 15px;
+
+    line-height: 1.8;
+
+    margin: 15px 0;
+}
+
+
+#missionBriefing strong {
+    color: white !important;
+}
+
+
+/* =========================================================
+   NOVA HIGHLIGHT
+   ========================================================= */
+
+#missionBriefing .briefing-highlight {
+    margin: 30px 0;
+
+    padding: 22px;
+
+    background: rgba(34, 211, 238, 0.06);
+
+    border-left: 3px solid #22d3ee;
+
+    box-shadow:
+        inset 0 0 20px rgba(34, 211, 238, 0.04);
+}
+
+
+#missionBriefing .briefing-highlight span {
+    display: block;
+
+    color: #22d3ee !important;
+
+    font-family: "Share Tech Mono", monospace;
+
+    font-size: 11px;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 8px;
+}
+
+
+#missionBriefing .briefing-highlight strong {
+    display: block;
+
+    color: white !important;
+
+    font-family: "Orbitron", sans-serif;
+
+    font-size: 25px;
+
+    letter-spacing: 4px;
+}
+
+
+/* =========================================================
+   STATUS
+   ========================================================= */
+
+#missionBriefing .popup-status {
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+
+    margin-top: 30px;
+
+    padding: 15px 20px;
+
+    border-top: 1px solid rgba(34, 211, 238, 0.3);
+
+    border-bottom: 1px solid rgba(34, 211, 238, 0.3);
+
+    font-family: "Share Tech Mono", monospace;
+}
+
+
+#missionBriefing .popup-status span {
+    color: #64748b !important;
+
+    letter-spacing: 2px;
+}
+
+
+#missionBriefing .popup-status strong {
+    color: #22c55e !important;
+
+    letter-spacing: 3px;
+
+    text-shadow:
+        0 0 10px rgba(34, 197, 94, 0.5);
+}
+
+
+/* =========================================================
+   ACKNOWLEDGE BUTTON
+   ========================================================= */
+
+#missionBriefing .popup-action {
+    display: block;
+
+    margin: 30px auto 0;
+
+    padding: 13px 25px;
+
+    background: transparent !important;
+
+    border: 1px solid #22d3ee !important;
+
+    color: #22d3ee !important;
+
+    font-family: "Orbitron", sans-serif;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+    cursor: pointer;
+
+    transition: 0.3s ease;
+}
+
+
+#missionBriefing .popup-action:hover {
+    background: #22d3ee !important;
+
+    color: #020617 !important;
+
+    box-shadow:
+        0 0 25px rgba(34, 211, 238, 0.7);
+
+    transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+    #missionBriefing {
+        padding: 15px !important;
+    }
+
+    #missionBriefing .info-popup-box {
+        width: 95vw;
+
+        max-height: 90vh;
+
+        padding: 30px 22px;
+    }
+
+    #missionBriefing h2 {
+        font-size: 2rem;
+
+        letter-spacing: 3px;
+    }
+
+    #missionBriefing h3 {
+        font-size: 14px;
+
+        letter-spacing: 2px;
+    }
+
+    #missionBriefing p {
+        font-size: 14px;
+
+        line-height: 1.7;
+    }
+}
+/* =========================================================
+   FOOTER
+========================================================= */
+
+footer {
+  position: relative;
+  overflow: hidden;
+
+  text-align: center;
+  margin-top: 20px;
+  padding: 35px 10px 20px;
+
+  background: #020617;
+
+  border-top: 1px solid rgba(56, 189, 248, 0.35);
+
+  color: #64748B;
+  font-family: "Share Tech Mono", monospace;
+
+  box-shadow:
+    0 -5px 25px rgba(56, 189, 248, 0.08);
+
+  min-height: 150px;
+}
+
+
+/* =========================================================
+   FOOTER TEXT
+   Keeps text ABOVE the moon
+========================================================= */
+
+footer p {
+  position: relative;
+  z-index: 5;
+}
+
+
+/* =========================================================
+   PIXEL MOON
+   Uses moon-pixel.png
+========================================================= */
+
+.pixel-moon {
+  position: absolute;
+
+  /* Move moon toward the right */
+  right: -85px;
+
+  /*
+     Pushes the moon partly below the footer.
+     Increase this number to hide more of it.
+  */
+  bottom: -180px;
+
+  width: 420px;
+  height: auto;
+
+  pointer-events: none;
+
+  /*
+     Moon stays behind footer text
+     but above the footer background.
+  */
+  z-index: 2;
+
+  opacity: 0.85;
+
+  /*
+     Soft space-blue glow
+  */
+  filter:
+    drop-shadow(0 0 12px rgba(255, 255, 255, 0.45))
+    drop-shadow(0 0 30px rgba(56, 189, 248, 0.35))
+    drop-shadow(0 0 65px rgba(56, 189, 248, 0.15));
+
+  image-rendering: pixelated;
+}
+
+
+/* =========================================================
+   MOON IMAGE
+========================================================= */
+
+.pixel-moon img {
+  display: block;
+
+  width: 100%;
+  height: auto;
+
+  image-rendering: pixelated;
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.hero {
+  position: relative;
+  overflow: hidden;
+  padding-bottom: 40px;
+}
+
+
+/* =========================================================
+   STARS GROUP
+========================================================= */
+
+.stars-group {
+  position: absolute;
+
+  top: 45px;
+  right: -30px;
+
+  width: 260px;
+  height: 340px;
+
+  pointer-events: none;
+}
+
+
+
+/* =========================================================
+   INTRO SCREEN
+========================================================= */
+
+#intro-screen {
+  position: fixed;
+
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100vh;
+
+  background: #020617;
+
+  overflow: hidden;
+
+  z-index: 99999;
+
+  transition: opacity 1.5s;
+}
+
+
+/* =========================================================
+   INTRO
+========================================================= */
+
+#intro {
+  position: fixed;
+
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100vh;
+
+  background: #000;
+
+  overflow: hidden;
+
+  z-index: 99999;
+}
+
+
+/* =========================================================
+   WEBSITE
+========================================================= */
+
+#website {
+  opacity: 0;
+
+  position: relative;
+
+  overflow: hidden;
+}
+
+
+/* =========================================================
+   WARP CANVAS
+========================================================= */
+
+#warpCanvas {
+  position: absolute;
+
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  z-index: 3;
+}
+
+
+/* =========================================================
+   CANVAS FADE
+========================================================= */
+
+@keyframes canvasFade {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+
+/* =========================================================
+   BLACK INTRO
+========================================================= */
+
+.blackIntro {
+  position: absolute;
+
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+
+  background: black;
+
+  z-index: 5;
+
+  animation: fadeBlack 0.8s forwards;
+}
+
+
+@keyframes fadeBlack {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+
+/* =========================================================
+   INTRO GLOW
+========================================================= */
+
+.introGlow {
+  position: absolute;
+
+  bottom: -300px;
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  width: 1600px;
+  height: 800px;
+
+  border-radius: 50%;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(255, 170, 60, 0.95) 0%,
+      rgba(255, 110, 20, 0.55) 30%,
+      rgba(255, 60, 0, 0.25) 55%,
+      transparent 80%
+    );
+
+  filter: blur(120px);
+
+  opacity: 0;
+
+  animation: introGlowRise 8s forwards;
+}
+
+
+@keyframes introGlowRise {
+  0% {
+    opacity: 0;
+
+    transform:
+      translateX(-50%)
+      translateY(350px)
+      scale(0.5);
+  }
+
+  20% {
+    opacity: 1;
+  }
+
+  70% {
+    transform:
+      translateX(-50%)
+      translateY(-120px)
+      scale(1);
+  }
+
+  100% {
+    transform:
+      translateX(-50%)
+      translateY(-420px)
+      scale(1.45);
+  }
+}
+
+
+/* =========================================================
+   EMBERS
+========================================================= */
+
+#ember {
+  position: absolute;
+
+  inset: 0;
+
+  overflow: hidden;
+
+  pointer-events: none;
+
+  z-index: 4;
+}
+
+
+.ember {
+  position: absolute;
+
+  bottom: -10px;
+
+  border-radius: 50px;
+
+  background:
+    radial-gradient(
+      circle,
+      #fff 0%,
+      #ffe8a3 20%,
+      #ffbf4d 45%,
+      #ff6b00 100%
+    );
+
+  opacity: 0;
+
+  filter: blur(0.5px);
+
+  animation: rise linear forwards;
+}
+
+
+@keyframes rise {
+  0% {
+    opacity: 0;
+
+    transform:
+      translateY(0)
+      scale(0.4);
+  }
+
+  10% {
+    opacity: 0.8;
+  }
+
+  100% {
+    opacity: 0;
+
+    transform:
+      translateY(-110vh)
+      scale(1);
+  }
+}
+
+
+/* =========================================================
+   QUOTE
+========================================================= */
+
+#quote {
+  position: absolute;
+
+  top: 50%;
+  left: 50%;
+
+  transform: translate(-50%, -50%);
+
+  text-align: center;
+
+  opacity: 0;
+
+  z-index: 8;
+
+  transition: opacity 1.5s ease;
+}
+
+
+.introQuote {
+  font-family: "Space Grotesk", serif;
+
+  font-size: 42px;
+
+  font-weight: 700;
+
+  color: white;
+
+  letter-spacing: 4px;
+
+  text-shadow:
+    0 0 20px white,
+    0 0 45px #38BDF8;
+
+  margin-bottom: 25px;
+}
+
+
+/* =========================================================
+   FLASH
+========================================================= */
+
+#flash {
+  position: absolute;
+
+  inset: 0;
+
+  background: white;
+
+  opacity: 0;
+
+  pointer-events: none;
+
+  z-index: 50;
+}
+
+
+/* =========================================================
+   MISSION TITLE
+========================================================= */
+
+.introMission {
+  font-family: "Orbitron", sans-serif;
+
+  font-size: 39px;
+
+  font-weight: 900;
+
+  letter-spacing: 18px;
+
+  text-transform: uppercase;
+
+  color: #FFD166;
+
+  text-shadow:
+    0 0 8px #FFD166,
+    0 0 18px #FFB347,
+    0 0 40px #FF7A18,
+    0 0 80px rgba(255, 122, 24, 0.6);
+
+  animation:
+    missionGlow 2.5s ease-in-out infinite,
+    missionFloat 3s ease-in-out infinite;
+}
+
+
+@keyframes missionGlow {
+  0%,
+  100% {
+    text-shadow:
+      0 0 20px #FFD166,
+      0 0 60px #FF7A18;
+  }
+
+  50% {
+    text-shadow:
+      0 0 35px #FFF5B0,
+      0 0 80px #FF9A3D,
+      0 0 120px #FF7A18;
+  }
+}
+
+
+@keyframes missionFloat {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+
+/* =========================================================
+   CAMERA SHAKE
+========================================================= */
+
+@keyframes camerashake {
+  0% {
+    transform: translate(0, 0);
+  }
+
+  15% {
+    transform: translate(-6px, 3px);
+  }
+
+  30% {
+    transform: translate(7px, -4px);
+  }
+
+  45% {
+    transform: translate(-5px, -5px);
+  }
+
+  60% {
+    transform: translate(6px, 2px);
+  }
+
+  75% {
+    transform: translate(-3px, 3px);
+  }
+
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+
+.shake {
+  animation: camerashake 0.55s ease;
+}
+
+
+/* =========================================================
+   FLOATING
+========================================================= */
+
+.floating {
+  animation: quoteFloat 4s ease-in-out infinite;
+}
+
+
+@keyframes quoteFloat {
+  0%,
+  100% {
+    transform: translate(-50%, -50%);
+  }
+
+  50% {
+    transform: translate(-50%, -56%);
+  }
+}
+
+
+.breathing {
+  animation: glowBreath 4s ease-in-out infinite;
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 800px) {
+
+  .navbar {
+    flex-direction: column;
+
+    height: auto;
+
+    gap: 25px;
+
+    margin-right: 0;
+
+    transform: none;
+
+    padding: 25px;
+  }
+
+  .navbar:hover {
+    transform: translateY(-3px);
+  }
+
+  .navlist {
+    width: min(90vw, 350px);
+
+    max-width: 350px;
+
+    min-height: 90px;
+
+    flex: none;
+
+    margin-top: 0;
+  }
+
+  #navlist1,
+  #navlist2,
+  #navlist3 {
+    width: min(90vw, 350px);
+  }
+
+  header {
+    padding-bottom: 80px;
+  }
+
+  .mission-info {
+    flex-direction: column;
+
+    gap: 25px;
+
+    padding: 30px;
+
+    width: 90vw;
+  }
+
+  .encrypted-terminal {
+    width: 90vw;
+
+    padding: 25px;
+  }
+
+  .loading-box {
+    width: 90vw;
+  }
+
+  .introMission {
+    font-size: 25px;
+
+    letter-spacing: 8px;
+
+    text-align: center;
+  }
+
+
+  /* =====================================================
+     MOBILE MOON
+  ===================================================== */
+
+  .pixel-moon {
+    width: 300px;
+
+    right: -70px;
+
+    bottom: -130px;
+  }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+  #missionBriefing {
+    padding: 15px !important;
+  }
+
+  #missionBriefing .info-popup-box {
+    width: 95vw;
+
+    max-height: 90vh;
+
+    padding: 30px 22px;
+  }
+
+  #missionBriefing h2 {
+    font-size: 2rem;
+
+    letter-spacing: 3px;
+  }
+
+  #missionBriefing h3 {
+    font-size: 14px;
+
+    letter-spacing: 2px;
+  }
+
+  #missionBriefing p {
+    font-size: 14px;
+
+    line-height: 1.7;
+  }
+
+  .mission-button {
+    font-size: 15px;
+
+    padding: 15px 22px;
+  }
+
+  .introMission {
+    font-size: 20px;
+
+    letter-spacing: 5px;
+  }
+}
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+footer {
+  position: relative;
+  overflow: hidden;
+
+  min-height: 180px;
+  margin-top: 20px;
+  padding: 35px 10px 25px;
+
+  text-align: center;
+
+  background: #020617;
+  border-top: 1px solid rgba(56, 189, 248, 0.35);
+
+  color: #64748B;
+  font-family: "Share Tech Mono", monospace;
+
+  box-shadow:
+    0 -5px 25px rgba(56, 189, 248, 0.08);
+}
+
+/* Footer text stays above moon */
+footer p {
+  position: relative;
+  z-index: 5;
+  margin: 0;
+}
+
+/* =========================================================
+   PIXEL MOON
+========================================================= */
+
+footer .pixel-moon {
+  position: absolute;
+
+  width: 380px;
+  height: auto;
+
+  right: 0px;
+  bottom: -20px;
+
+  display: block;
+  z-index: 2;
+  pointer-events: none;
+  opacity: 1;
+
+  image-rendering: pixelated;
+
+  filter:
+    drop-shadow(0 0 8px rgba(255, 255, 255, 0.9))
+    drop-shadow(0 0 20px rgba(255, 255, 255, 0.75))
+    drop-shadow(0 0 40px rgba(56, 189, 248, 0.55));
+
+  animation: moonGlow 3s ease-in-out infinite;
+}
+
+/* Moon image itself */
+footer .pixel-moon img {
+  display: block;
+
+  width: 100%;
+  height: auto;
+
+  image-rendering: pixelated;
+}
+
+/* =========================================================
+   MOON GLOW
+========================================================= */
+
+@keyframes moonGlow {
+  0%,
+  100% {
+    filter:
+      drop-shadow(0 0 8px rgba(255, 255, 255, 0.8))
+      drop-shadow(0 0 20px rgba(255, 255, 255, 0.6))
+      drop-shadow(0 0 40px rgba(56, 189, 248, 0.4));
+  }
+
+  50% {
+    filter:
+      drop-shadow(0 0 12px rgba(255, 255, 255, 1))
+      drop-shadow(0 0 30px rgba(255, 255, 255, 0.9))
+      drop-shadow(0 0 55px rgba(56, 189, 248, 0.7));
+  }
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 800px) {
+  footer {
+    min-height: 160px;
+  }
+
+  footer .pixel-moon {
+    width: 300px;
+    right: -60px;
+    bottom: -90px;
+  }
+}
+
+@media (max-width: 600px) {
+  footer .pixel-moon {
+    width: 230px;
+    right: -45px;
+    bottom: -70px;
+  }
+}
+
+
+/* =====================================================
+   NOVA CHARACTER SELECTOR
+===================================================== */
+
+.nova-selector {
+    width: min(700px, 90%);
+    margin: 35px auto 20px;
+    text-align: center;
+    position: relative;
+    z-index: 20;
+}
+
+.nova-selector-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+
+    color: #67e8f9;
+
+    font-family: "Share Tech Mono", monospace;
+
+    font-size: 10px;
+
+    letter-spacing: 3px;
+}
+
+.selector-line {
+    width: 60px;
+    height: 1px;
+
+    background: rgba(103, 232, 249, 0.4);
+}
+
+
+.nova-selector h3 {
+    margin: 8px 0 10px;
+
+    color: white;
+
+    font-family: "Orbitron", sans-serif;
+
+    font-size: 18px;
+
+    letter-spacing: 3px;
+}
+
+
+/* =====================================================
+   NOVA DISPLAY
+===================================================== */
+
+.nova-display {
+    height: 230px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 35px;
+
+    position: relative;
+}
+
+
+/* =====================================================
+   NOVA
+===================================================== */
+
+.nova-character {
+    width: 180px;
+    height: 210px;
+
+    position: relative;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+}
+
+
+.nova-character img {
+    max-width: 150px;
+    max-height: 210px;
+
+    object-fit: contain;
+
+    position: relative;
+
+    z-index: 3;
+
+    filter:
+        drop-shadow(0 0 12px rgba(34, 211, 238, .7))
+        drop-shadow(0 0 25px rgba(34, 211, 238, .25));
+
+    transition: .3s ease;
+}
+
+
+/* =====================================================
+   HOLOGRAM
+===================================================== */
+
+.nova-hologram {
+    position: absolute;
+
+    width: 150px;
+    height: 150px;
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(34, 211, 238, .22),
+            transparent 65%
+        );
+
+    border: 1px solid rgba(34, 211, 238, .35);
+
+    box-shadow:
+        0 0 30px rgba(34, 211, 238, .2);
+
+    animation: novaHologram 3s ease-in-out infinite;
+}
+
+
+@keyframes novaHologram {
+
+    0%,
+    100% {
+        transform: scale(.9);
+        opacity: .5;
+    }
+
+    50% {
+        transform: scale(1.05);
+        opacity: .9;
+    }
+
+}
+
+
+/* =====================================================
+   SCAN LINE
+===================================================== */
+
+.nova-scan {
+    position: absolute;
+
+    width: 150px;
+    height: 2px;
+
+    background: #67e8f9;
+
+    box-shadow:
+        0 0 10px #22d3ee;
+
+    z-index: 5;
+
+    animation: novaScan 2.5s linear infinite;
+}
+
+
+@keyframes novaScan {
+
+    0% {
+        transform: translateY(-80px);
+        opacity: 0;
+    }
+
+    20% {
+        opacity: 1;
+    }
+
+    80% {
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(80px);
+        opacity: 0;
+    }
+
+}
+
+
+/* =====================================================
+   ARROWS
+===================================================== */
+
+.suit-arrow {
+    width: 42px;
+    height: 42px;
+
+    background: rgba(3, 7, 18, .8);
+
+    border: 1px solid rgba(34, 211, 238, .5);
+
+    color: #67e8f9;
+
+    font-size: 34px;
+
+    cursor: pointer;
+
+    transition: .25s;
+
+    z-index: 10;
+}
+
+
+.suit-arrow:hover {
+    background: rgba(34, 211, 238, .15);
+
+    border-color: #67e8f9;
+
+    box-shadow:
+        0 0 18px rgba(34, 211, 238, .4);
+
+    transform: scale(1.08);
+}
+
+
+/* =====================================================
+   SUIT INFO
+===================================================== */
+
+.suit-info {
+    margin-top: 0;
+}
+
+
+.suit-number {
+    color: #64748b;
+
+    font-family: "Share Tech Mono", monospace;
+
+    font-size: 10px;
+
+    letter-spacing: 3px;
+}
+
+
+.suit-info h4 {
+    margin: 6px 0;
+
+    color: #67e8f9;
+
+    font-family: "Orbitron", sans-serif;
+
+    font-size: 17px;
+
+    letter-spacing: 2px;
+}
+
+
+.suit-info p {
+    margin: 0 0 10px;
+
+    color: #94a3b8;
+
+    font-family: "Share Tech Mono", monospace;
+
+    font-size: 11px;
+}
+
+
+/* =====================================================
+   EQUIP BUTTON
+===================================================== */
+
+.select-suit {
+    padding: 8px 18px;
+
+    background: rgba(34, 211, 238, .06);
+
+    border: 1px solid rgba(34, 211, 238, .6);
+
+    color: #67e8f9;
+
+    font-family: "Orbitron", sans-serif;
+
+    font-size: 9px;
+
+    letter-spacing: 2px;
+
+    cursor: pointer;
+
+    transition: .25s;
+}
+
+
+.select-suit:hover {
+    background: rgba(34, 211, 238, .15);
+
+    box-shadow:
+        0 0 15px rgba(34, 211, 238, .3);
+}
+
+
+/* =====================================================
+   DOTS
+===================================================== */
+
+.suit-dots {
+    margin-top: 10px;
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 7px;
+}
+
+
+.suit-dot {
+    width: 6px;
+    height: 6px;
+
+    border-radius: 50%;
+
+    background: #334155;
+
+    transition: .25s;
+}
+
+
+.suit-dot.active {
+    background: #67e8f9;
+
+    box-shadow:
+        0 0 8px #22d3ee;
+}
+
+/* ========================================
+   NOVA LOCKED SUIT
+======================================== */
+
+.suit-locked {
+    filter: grayscale(1) brightness(0.35);
+    opacity: 0.55;
+}
+
+
+/* ========================================
+   SUIT BUTTON STATES
+======================================== */
+
+.select-suit.disabled {
+    opacity: 0.45;
+    cursor: not-allowed;
+}
+
+
+.select-suit.equipped {
+    border-color: #22c55e;
+    color: #22c55e;
+    cursor: default;
+}
+
+
+.navlist {
+    position: relative;
+    overflow: hidden;
+}
+
+.navlist::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background-image: url("assets/mission-bg.png");
+    background-size: cover;
+    background-position: center;
+
+    opacity: 0.5;
+    z-index: 0;
+}
+
+.navlist > * {
+    position: relative;
+    z-index: 1;
+}
+
+
+#navlist1::before {
+    background-image: url("assets/missionbrief.png");
+}
+
+#navlist2::before {
+    background-image: url("assets/missionbrief.png");
+}
+
+#navlist3::before {
+    background-image: url("assets/missionbrief.png");
+}

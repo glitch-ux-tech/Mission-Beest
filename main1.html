@@ -1,0 +1,355 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="planet.css" />
+    <link rel="stylesheet" href="gamepart.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Mission Beest</title>
+  </head>
+  <body>
+    <audio id="pageMusic" preload="auto" loop>
+      <source src="assets/new-worlds.mp3" type="audio/mpeg" />
+    </audio>
+    <div id="intro">
+      <div id="flash"></div>
+      <div class="blackIntro"></div>
+      <div class="whiteFlash"></div>
+      <div class="introGlow"></div>
+      <canvas id="warpCanvas"></canvas>
+      <div id="ember"></div>
+      <div id="quote">
+        <h2 class="introQuote">WHEN HOPE BURNS, EVEN THE STARS ALIGN.</h2>
+
+        <div class="introMission" id="introMission">
+          <br />
+          MISSION : BEEST
+        </div>
+      </div>
+    </div>
+
+    <div id="website">
+      <main>
+        <section class="hero">
+          <img src="assets/star2.png" class="star-small" />
+
+          <div class="stars-group">
+            <img src="assets/star2.png" class="star-medium" />
+            <img src="assets/star2.png" class="star-large" />
+          </div>
+
+          <header>
+            <h1>Galactic Adventure</h1>
+
+            <div class="intro">
+              <h2 class="hero-title">🚀 Begin Your Galactic Adventure</h2>
+            </div>
+
+            <!-- =================================================
+     NOVA CHARACTER / SUIT SELECTOR
+================================================== -->
+
+            <section class="nova-selector">
+              <div class="nova-selector-header">
+                <span class="selector-line"></span>
+
+                <span>NOVA // EQUIPMENT BAY</span>
+
+                <span class="selector-line"></span>
+              </div>
+
+              <h3>SELECT NOVA</h3>
+
+              <div class="nova-display">
+                <!-- LEFT ARROW -->
+                <button
+                  class="suit-arrow suit-left"
+                  id="suitLeft"
+                  type="button"
+                >
+                  ‹
+                </button>
+
+                <!-- NOVA -->
+                <div class="nova-character">
+                  <div class="nova-hologram"></div>
+
+                  <img
+                    id="novaSuitImage"
+                    src="assets/nova-default.png"
+                    class="nova-character"
+                    alt="Nova Explorer Suit"
+                  />
+
+                  <div class="nova-scan"></div>
+                </div>
+
+                <!-- RIGHT ARROW -->
+                <button
+                  class="suit-arrow suit-right"
+                  id="suitRight"
+                  type="button"
+                >
+                  ›
+                </button>
+              </div>
+
+              <!-- SUIT INFORMATION -->
+
+              <div class="suit-info">
+                <span class="suit-number" id="novaSuitNumber">
+                  SUIT 01 / 05
+                </span>
+
+                <h4 id="novaSuitName">EXPLORER</h4>
+
+                <p id="novaSuitDescription">STANDARD MISSION SUIT</p>
+
+                <button id="selectSuit" class="select-suit" type="button">
+                  EQUIP SUIT
+                </button>
+              </div>
+
+              <!-- DOTS -->
+
+              <div class="suit-dots" id="suitDots"></div>
+            </section>
+          </header>
+
+          <div class="stars">
+            <span class="spark"></span>
+            <span class="spark"></span>
+            <span class="spark"></span>
+            <span class="spark"></span>
+            <span class="spark"></span>
+            <span class="spark"></span>
+            <span class="spark"></span>
+            <span class="spark"></span>
+            <span class="spark"></span>
+            <span class="spark"></span>
+          </div>
+
+          <!-- =========================
+           MAIN NAVIGATION BAR
+      ========================== -->
+
+          <nav class="navbar">
+            <div class="navlist" id="navlist1">
+              <span class="rocket">.</span>
+              <span class="head1">MISSION BRIEFING</span>
+              <span class="subtitle">Receive your orders</span>
+            </div>
+
+            <div class="navlist" id="navlist2">
+              <span class="galaxy">.</span>
+              <span class="head2">GALAXY MAP</span>
+              <span class="subtitle">Explore the galaxy</span>
+            </div>
+
+            <div class="navlist" id="navlist3">
+              <span class="trophy">.</span>
+              <span class="head3">ACHIEVEMENTS</span>
+              <span class="subtitle">Track your progress</span>
+            </div>
+          </nav>
+
+          <!-- =================================================
+           MISSION BRIEFING POPUP
+      ================================================== -->
+
+          <div id="missionBriefing">
+            <div class="info-popup-box">
+              <!-- CLOSE BUTTON -->
+
+              <button id="closeMissionBriefing" class="popup-close">×</button>
+
+              <!-- POPUP LABEL -->
+
+              <div class="popup-label">EARTH BASE // CLASSIFIED</div>
+
+              <!-- TITLE -->
+
+              <h2>MISSION : BEEST</h2>
+
+              <div class="popup-divider"></div>
+
+              <!-- INTRODUCTION -->
+
+              <h3>THE LAST HOPE OF HUMANITY</h3>
+
+              <p>
+                Earth is no longer a safe home for humanity. A rapidly
+                developing planetary crisis has pushed civilization toward the
+                edge of survival.
+              </p>
+
+              <p>
+                Earth Base has launched
+                <strong>Mission BEEST</strong> — a long-term planetary
+                exploration program designed to search beyond Earth for the
+                possibility of humanity's survival.
+              </p>
+
+              <p>
+                Multiple missions have been assigned across the solar system.
+                Each destination holds information, resources, or possibilities
+                that could determine the future of humanity.
+              </p>
+
+              <!-- NOVA INFORMATION -->
+
+              <div class="briefing-highlight">
+                <span>MISSION SUBJECT</span>
+
+                <strong>NOVA</strong>
+
+                <p>
+                  Selected for planetary exploration and long-duration survival
+                  operations.
+                </p>
+              </div>
+
+              <!-- JOURNEY -->
+
+              <h3>THE JOURNEY</h3>
+
+              <p>
+                Nova's body showed an unprecedented ability to adapt to alien
+                planetary conditions. He was placed into long-term hibernation
+                and launched into deep space. If he awakens successfully on
+                another planet, humanity will achieve its first journey beyond
+                Earth and Our last hope for survival..
+              </p>
+
+              <p>
+                The mission is simple: awaken Nova on another world, survive its
+                conditions, and uncover what humanity needs to secure our
+                future.
+              </p>
+
+              <!-- STATUS -->
+
+              <div class="popup-status">
+                <span>MISSION STATUS</span>
+
+                <strong>ACTIVE</strong>
+              </div>
+
+              <!-- CLOSE / ACKNOWLEDGE -->
+
+              <button id="closeBriefingButton" class="popup-action">
+                ACKNOWLEDGE BRIEFING
+              </button>
+            </div>
+          </div>
+        </section>
+
+        <!-- =================================================
+         MAIN CONTENT
+    ================================================== -->
+
+        <div class="main-content">
+          <div class="beginning">
+            <p class="encrypted-warning" id="warning">
+              Incoming encrypted transmission...
+              <br />
+              Authorization Required
+            </p>
+
+            <br />
+
+            <button class="mission-button">[ AUTHORIZE ]</button>
+          </div>
+
+          <br />
+
+          <!-- ENCRYPTED TERMINAL -->
+
+          <div id="terminal" class="encrypted-terminal">
+            <h3
+              class="encrypted-title glitch"
+              data-text="UNKNOWN SIGNAL DETECTED"
+            >
+              UNKNOWN SIGNAL DETECTED
+            </h3>
+
+            <p
+              class="encrypted-warning glitch"
+              data-text="⚠Awaiting User Authorization..."
+            >
+              ⚠Awaiting User Authorization...
+            </p>
+
+            <p class="encrypted-line">Origin: █████████████</p>
+
+            <p class="encrypted-line">Coordinates: ██°██'██"</p>
+
+            <p class="encrypted-line">Encryption Level: 98%</p>
+
+            <p class="encrypted-line">Signal Strength: ███████░░ 74%</p>
+
+            <br />
+          </div>
+
+          <!-- MISSION TERMINAL -->
+
+          <div class="mission-info">
+            <img src="assets/planet.png" class="planet" />
+
+            <div class="text">
+              <div class="mission-paragraph">
+                <p class="terminal-title">EARTH BASE TERMINAL</p>
+
+                <p class="terminal-current"></p>
+
+                <div class="loading-box">
+                  <div class="loading-bar"></div>
+                </div>
+
+                <button
+                  id="openGalaxy"
+                  class="mission-button"
+                  style="display: none"
+                >
+                  OPEN GALAXY MAP →
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+
+      <!-- FOOTER -->
+
+      <footer>
+        <div class="pixel-moon">
+          <img src="assets/moon-pixel.png" alt="Pixelated moon" />
+        </div>
+
+        <p>© 2026 Mission Beest. Made by Bijaya.</p>
+      </footer>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="intro.js"></script>
+    <script src="music.js"></script>
+  </body>
+</html>

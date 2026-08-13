@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Galaxy Map | Mission BEEST</title>
+
+    <link rel="stylesheet" href="style.css" />
+
+    <link rel="stylesheet" href="galaxy.css" />
+  </head>
+
+  <body>
+    <!-- =========================
+         GALAXY BACKGROUND
+    ========================== -->
+
+    <div class="galaxy-background"></div>
+
+    <!-- =========================
+         GALAXY SCREEN
+    ========================== -->
+
+    <section class="galaxy-screen">
+      <!-- =========================
+             BACK TO EARTH BASE
+        ========================== -->
+
+      <button id="backToMain" class="back-to-base" type="button">
+        ← RETURN TO BASE
+      </button>
+
+      <!-- =========================
+             TITLE
+        ========================== -->
+
+      <h1 class="galaxy-heading">GALAXY MAP</h1>
+
+      <p class="galaxy-subtitle">Exploration Mode Activated</p>
+
+      <!-- =========================
+             PLANET CARDS
+        ========================== -->
+
+      <div class="planet-container">
+        <!-- MERCURY -->
+
+        <div class="planet-card unlocked" id="mercuryCard">
+          <div class="planet-icon">☿</div>
+
+          <div class="mission-header">
+            <h1>MERCURY</h1>
+          </div>
+        </div>
+
+        <!-- VENUS -->
+
+        <div class="planet-card locked">
+          <div class="planet-icon">♀</div>
+
+          <h2>Venus</h2>
+
+          <p>LOCKED</p>
+        </div>
+
+        <!-- MARS -->
+
+        <div class="planet-card locked">
+          <div class="planet-icon">♂</div>
+
+          <h2>Mars</h2>
+
+          <p>LOCKED</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================
+         GALAXY JAVASCRIPT
+    ========================== -->
+
+    <script src="galaxy.js"></script>
+  </body>
+</html>
