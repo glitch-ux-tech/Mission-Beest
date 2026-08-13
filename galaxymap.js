@@ -4,7 +4,7 @@ const backToMission = document.getElementById("backToMission");
 
 if (backToMission) {
   backToMission.addEventListener("click", () => {
-    window.location.href = "./main1.html?skipIntro=true";
+    window.location.href = "./index.html?skipIntro=true";
   });
 }
 
